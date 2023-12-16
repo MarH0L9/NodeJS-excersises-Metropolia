@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Movies
+    link(
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    )
+  body
+    div.container
+      div
+        a(href='/addcustomer').btn.btn-primary Add New Customer
+      div
+        table.table.table-striped
+          tbody
+            thead
+              tr
+                td Id
+                td Firstname
+                td Lastname
+                td Email
+                td Phone
+            each customer in customers
+              tr 
+                td #{customer.id}
+                td #{customer.firstname}
+                td #{customer.lastname}
+                td #{customer.email}
+                td #{customer.phone}
